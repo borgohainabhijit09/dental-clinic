@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { FAQ } from "@/components/sections/FAQ";
 
 export const metadata: Metadata = {
     title: "Patient Information | Lone Star Family Dental",
@@ -66,18 +67,8 @@ export default function PatientInfoPage() {
                 {/* FAQs */}
                 <section>
                     <h2 className="text-2xl font-bold text-gray-900 mb-6 border-b pb-4">Frequently Asked Questions</h2>
-                    <div className="space-y-6 max-w-3xl">
-                        {[
-                            { q: "Do you accept walk-ins?", a: "We operate primarily by appointment to ensure every patient gets adequate time. However, please call us for emergency availabilities." },
-                            { q: "Do you see children?", a: "Absolutley! We love seeing kids and recommend bringing them in for their first visit around age 1." },
-                            { q: "What if I have dental anxiety?", a: "You are not alone. Please let us know when you book. We offer comfort amenities and can discuss sedation options if needed." },
-                            { q: "How much does a cleaning cost?", a: "Costs vary by insurance coverage. For uninsured patients, we offer a transparent new patient special. Call us for details." }
-                        ].map((faq, i) => (
-                            <div key={i} className="bg-gray-50 p-6 rounded-xl">
-                                <h3 className="font-bold text-gray-900 mb-2">{faq.q}</h3>
-                                <p className="text-gray-600">{faq.a}</p>
-                            </div>
-                        ))}
+                    <div className="max-w-3xl">
+                        <FAQ />
                     </div>
                 </section>
 
